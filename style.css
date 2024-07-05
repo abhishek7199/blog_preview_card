@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* primary color */
+  --yellow: hsl(47, 88%, 63%);
+  --btn_hover: hsla(47, 88%, 63%, 0.61);
+
+  /* neutral color */
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 50%);
+  --black: hsl(0, 0%, 7%);
+
+  /* font-family */
+  font-family: "Figtree", sans-serif;
+}
+
+.wrapper {
+  background-color: var(--yellow);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  border: 1px solid var(--black);
+  width: fit-content;
+  height: fit-content;
+  padding: 20px;
+  background: var(--white);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  box-shadow: 5px 5px 5px 4px var(--black);
+}
+
+.container > :first-child {
+  border-radius: 10px;
+  width: 400px;
+}
+
+.btn > button {
+  width: 7rem;
+  height: 2rem;
+  background-color: var(--yellow);
+  border: none;
+  border-radius: 4px;
+  color: var(--black);
+  font-weight: 900;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn > button:hover {
+  transform: rotate(360deg) scale(0.8);
+}
+
+.btn > p {
+  padding-top: 12px;
+}
+
+.container > p {
+  width: 25rem;
+  color: var(--grey);
+}
+
+.admin {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin > img {
+  width: 40px;
+}
+
+.admin > h2 {
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 29px;
+  font-weight: bolder;
+}
+
+/* Media Quries */
+@media screen and (max-width: 550px) {
+  .container {
+    padding: 15px;
+    gap: 16px;
+  }
+
+  .container > :first-child {
+    width: 325px;
+  }
+
+  .btn > button:hover {
+    transform: rotate(0deg) scale(1);
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .container > p {
+    width: 19.5rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    padding: 14px;
+  }
+
+  .container > :first-child {
+    width: 290px;
+  }
+
+  h1 {
+    font-size: 21px;
+  }
+
+  .container > p {
+    width: 17rem;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container {
+    padding: 8px;
+    gap: 12px;
+  }
+
+  .container > :first-child {
+    width: 260px;
+  }
+
+  h1 {
+    font-size: 19px;
+  }
+
+  .container > p {
+    width: 16.5rem;
+    font-size: 12px;
+  }
+}
